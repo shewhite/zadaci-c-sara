@@ -1,0 +1,6 @@
+﻿  1.cpp
+c:\users\uc-m19\documents\sara franjul\29.11\1\1\1.cpp(170): warning C4804: '<=': unsafe use of type 'bool' in operation
+c:\users\uc-m19\documents\sara franjul\29.11\1\1\1.cpp(170): warning C4804: '<': unsafe use of type 'bool' in operation
+c:\users\uc-m19\documents\sara franjul\29.11\1\1\1.cpp(175): warning C4804: '<=': unsafe use of type 'bool' in operation
+c:\users\uc-m19\documents\sara franjul\29.11\1\1\1.cpp(175): warning C4804: '<': unsafe use of type 'bool' in operation
+  1.vcxproj -> C:\Users\UC-M19\Documents\Sara Franjul\29.11\1\Debug\1.exe
