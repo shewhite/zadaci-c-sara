@@ -1,0 +1,117 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a;
+	cin >> a;
+	cout << a << endl;
+}
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a;
+	int b;
+	
+	cin >> a;
+	cin >> b;
+
+	cout << a+b << endl;
+}
+
+#include <iostream>
+
+using namespace std;
+
+int main (){
+	float broj;
+
+	cin >> broj; 
+	
+	cout << broj << endl;
+}
+
+#include <iostream>
+
+
+using namespace std;
+
+int main(){
+	int a;
+	int b;
+
+	cin >> a;
+	cin >> b;
+
+	cout << b/a << endl;
+	cout << b % a<< endl;
+
+}
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+	float a;
+    float b;
+
+	cin >> a;
+	cin >> b;
+
+	cout << b * (a / 100);
+	
+}
+
+#include <iostream>
+#include <math.h>
+#include <iomanip>
+
+using namespace std;
+
+int main(){
+
+	float a, b, c, d, e;
+	float as;
+	float resultsd;
+
+	cin >> a;
+	cin >> b;
+	cin >> c;
+	cin >> d;
+	cin >> e;
+	as = (a + b + c + d + e) / 5;
+	cout << setprecision (2)<< fixed << as << endl;
+
+	resultsd = sqrt((pow(a - as, 2) + pow(b - as, 2) + pow(c - as, 2) + pow(d - as, 2) + pow(e - as, 2)) / 5);
+
+	cout << setprecision (2) << fixed<<  resultsd << endl;
+
+	
+}
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+	int a;
+	a = 6;
+	int b;
+	b = 2;
+	int c;
+	c = 1;
+
+		cout <<a/b*(c+b) << endl;
+
+}
+
+
