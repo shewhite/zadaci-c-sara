@@ -1,0 +1,275 @@
+#include <iostream>
+
+using namespace std; LUBENICA
+
+int main()
+{
+	int w; 
+
+	cin >> w;
+
+	while (w % 2 == 0 ) {
+		cout << "DA" << endl;
+		break;
+	}
+	while (w % 2 == 1 ) {
+		cout << "NE" << endl;
+		break;
+	}
+	while (== 1) {
+		cout << "NE" << endl;
+		break;
+	}
+
+
+	
+	return 0;
+}
+
+#include <iostream>
+
+using namespace std;  OLOVKA
+
+int main()
+{
+	int prvi;	
+	int drugi;
+	int n;
+
+	cin >> n;
+
+	prvi = n % 10;
+	n /= 100;
+	drugi = n % 10;
+
+	while (prvi < drugi) {
+		cout << "LIJEVI NAGIB";
+		break;
+	}
+	while (prvi > drugi) {
+		cout << "DESNI NAGIB";
+		break;
+	}
+	while (prvi == drugi) {
+		cout << "RAVNOTEZA";
+		break;
+	}
+
+	   	 
+	return 0;
+}
+
+#include <iostream>
+
+using namespace std; VLAK
+
+int main()
+{
+	int a;
+
+	cin >> a;
+
+	while (a == 1 || a == 2) {
+		cout << 8;
+		break;
+	}
+	while (a == 3 || a == 4) {
+		cout << 5;
+		break;
+	}
+	while (a == 5 || a == 6) {
+		cout << 4;
+		break;
+	}
+	while (a == 7 || a == 8) {
+		cout << 1;
+		break;
+	}
+
+	   	 
+	return 0;
+}
+
+#include <iostream>
+
+using namespace std; KOCKICE
+
+int main()
+{
+	int m, s;
+	cin >> m >> s;
+
+	while (m == 1 && s == 2 || m == 1 && s == 3 || m == 1 && s == 4 || m == 1 && s == 5 || m == 2 && s == 4 || m == 2 && s == 3 || m == 5 && s == 3 || m == 5 && s == 4 || m == 6 && s == 2 || m == 6 && s == 3 || m == 6 && s == 4 || m == 6 && s == 5) {
+		cout << "mirko"<<endl;
+		break;
+	}
+			
+	while (m == 1 && s == 6 || m == 1 && s == 1 || m == 2 && s == 2 || m == 3 && s == 3 || m == 4 && s == 4 || m == 5 && s == 5 || m == 6 && s == 6 || m == 2 && s == 5 || m == 5 && s == 2 || m == 3 && s == 4 || m == 4 && s == 3 || m == 6 && s == 1) {
+		cout << "nerijeseno"<<endl;
+		break;
+	}
+	
+	while (s == 1 && m == 5 || s == 1 && m == 4 || s == 1 && m == 3 || s == 1 && m == 2 || s == 2 && m == 4 || s == 2 && m == 3 || s == 5 && m == 3 || s == 5 && m == 4 || s == 6 && m == 2 || s == 6 && m == 3 || s == 6 && m == 4 || s == 6 && m == 5) {
+		cout << "slavko"<<endl;
+		break;
+	}
+	system("PAUSE");
+	return 0;
+}
+
+#include <iostream>
+
+using namespace std; PUDING 
+
+int main()
+{
+	int n, a, b, c, d, e, pot, ost;
+	cin >> n >> a >> b >> c >> d >> e;
+
+	pot = (a + b + c)/2;
+	ost = n - pot;
+
+	while ( ost >= d/2) {
+		cout << "PUDING OD COKOLADE" << endl;
+		break;
+	}
+	while (ost < d/2) {
+		cout << "PUDING OD VANILIJE" << endl;
+		break;
+	}
+
+	system("PAUSE");
+	return 0;
+}
+
+#include <iostream>
+
+using namespace std; PLANOVI
+
+int main()
+{
+	int a1, a2;
+	int b1, b2;
+	int c = 0;
+	cin >> a1 >> a2 >> b1 >> b2;
+	
+	while (b1 < a1 && b1 != a1 || b1 >a2 && b1 !=a2) {
+		cout << b1 << endl; 
+		c = 1;
+		break;
+	}
+	while (b2 < a1 && b2 != a2 || b2 >a2 && b2 != a2 && c==0) {
+		cout << b2 << endl;
+		break;
+	}
+
+
+	return 0;
+}
+#include <iostream>
+
+using namespace std; ECTS
+
+int main()
+{
+	int u, p, e;
+
+	cin >> u >> p;
+
+	e = u - p;
+
+	while (p < 30) {
+		cout << 8400 << endl; 
+			break;
+	}
+	while (p >= 30 && p<55) {
+		cout << e*140 << endl; 
+			break;
+	}
+	while (p >= 55) {
+		cout << 0 << endl; 
+			break;
+	}
+}
+
+#include <iostream>
+
+using namespace std; STANICA - NIJE TOÈNO 
+
+int main()
+{
+	int n, k, m, t;
+	cin >> n >> k >> m;
+
+	t=(k + m) - n;
+
+	while (k <= n) {
+		cout << "STANICA 1:" << n-k << endl;
+		break;
+	}
+	while (k < n) {
+		cout << "ZAKASNIT CE" << endl;
+		break;
+	}
+	while (k <= n)  {
+		cout << "STANICA 2: " << t << endl;
+		break;
+	}
+	while (k > n) {
+		cout << "ZAKASNIT CE" << endl;
+		break;
+	}
+
+
+
+}
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std; MELKIOR
+
+int main()
+{
+	int o1, o2, o3, o4, o5;
+	int o11, o22, o33, o44, o55;
+	float uk, pv, v; 
+	cin >> o1 >> o2 >> o3 >> o4 >> o5;
+	
+	uk = o1 + o2 + o3 + o4 + o5;
+
+	o11 = o1 * 1;
+	o22 = o2 * 2;
+	o33 = o3 * 3;
+	o44 = o4 * 4;
+	o55 = o5 * 5;
+
+	pv = o11 + o22 + o33 + o44 + o55;
+	
+	v = pv / uk;
+
+	cout <<setprecision (2)<<fixed<< v << endl;
+
+	while (o11 == 1) {
+		cout << "nedovoljan" << endl;
+		break;
+	}
+	while (v>=4.50 &&  v<=5.00 && o11!=1) {
+		cout << "odlican" << endl;
+		break;
+	}
+	while (v>= 3.50 && v < 4.50 && o11 != 1) {
+		cout << "vrlo dobar" << endl;
+		break;
+	}
+	while (v>=2.50 && v< 3.50 && o11 != 1) {
+		cout << "dobar" << endl;
+		break;
+	}
+	while (v>=2.00 && v < 2.50 && o11 != 1) {
+		cout << "dovoljan" << endl;
+		break;
+	}
+
+	return 0;
+}
