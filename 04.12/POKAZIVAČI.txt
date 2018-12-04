@@ -1,0 +1,146 @@
+POKAZIVAÈI I 
+
+using namespace std;    
+
+int main()
+{
+	int x;
+	cout << "Unesite velicinu polja: ";
+	cin >> x;
+
+	int *polje = new int[x];
+
+	for (int i = 0; i < x; i++) {
+		cout << "Polje " << i << ":";
+		cin  >> polje [i];
+	}
+	
+	for (int i = 0; i < x; i++) {
+		cout << polje[i] << "\t";
+
+	}
+	delete polje;
+	polje = nullptr;
+
+
+	system("PAUSE");
+	system("cls");
+}
+
+using namespace std;  ZAMJENA 
+
+void zamjena(int &a, int &b) {
+	
+	int c = a;
+	a = b;
+	b = c;
+}
+
+int main()
+{
+	int a = 1; 
+	int b = 3; 
+
+	cout << a << b << endl;
+
+	zamjena(a, b); 
+	
+	cout << a << b << endl;
+
+	zamjena(a, b); 
+
+	cout << a << b << endl;
+
+	system("PAUSE");
+	system("cls");
+}
+
+int main()   ISPIS ADRESA
+{
+	int a = 1; 
+	int b = 3; 
+	int c = 5;
+
+	cout << &a << &b << &c<<endl;
+	   
+	system("PAUSE");
+	system("cls");
+
+#include <iostream>
+
+
+using namespace std; 
+
+void zamjena(int &a, int &b) {
+	
+	int c = a;
+	a = b;
+	b = c;
+}
+
+int main()       POVEÆANJE POLJA ZA TRI
+
+{
+	int x; 
+
+	cin >> x;
+
+	int *polje = new int[x];
+
+	for (int i = 0; i < x; i++) {
+		for (int i = 0; i < x; i++) {
+			cout << "Polje" << i << ":" << endl;
+			cin >> polje[i];
+		}
+
+		for (int i = 0; i < x; i++) {
+			cout << polje[i] << "\t";
+		}
+
+		x = x + (x / 2);
+	}
+
+	delete polje;
+	polje = nullptr;
+
+	
+	 
+	
+	   
+	system("PAUSE");
+	system("cls");
+}
+
+int main()    STVARANJE DINAMIÈKOG TRODIMENZIJONALNOG POLJA 
+{
+	int x; 
+
+	cin >> x;
+
+	int *polje = new int[x];
+	int *red = new int[x];
+	int *line = new int[x];
+
+	
+		for (int i = 0; i < x; i++) {
+			cout << "Polje i Red i Line :  " << i << endl;
+			cin >> polje[i] >> red[i]>> line[i];
+			
+		}
+
+		for (int i = 0; i < x; i++) {
+			cout << polje[i] << "\t"<<endl;
+			cout << red[i] << "\t";
+			cout << line[i] << "\t";
+
+
+		}
+		
+		
+	delete polje;
+	polje = nullptr;
+		
+	   
+	system("PAUSE");
+	system("cls");
+}

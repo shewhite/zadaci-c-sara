@@ -1,0 +1,110 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <string>
+#include <time.h>
+
+using namespace std;  ODABERI BROJ OD 1 DO 100
+
+int main()
+{
+
+	int broj;
+	srand(time(NULL));
+	int pog = rand()%100+1;
+	
+	cout << "ODABERI NEKI BROJ OD 1 DO 100" << endl;
+	
+	do {
+		cin >> broj;
+
+		if (broj > pog) {
+			cout << "ODABERI MANJI BROJ" << endl;
+		}
+		else if (broj < pog) {
+			cout << "ODABERI VECI BROJ" << endl;
+		}
+		else if (broj == pog ) {
+			cout << " BRAVO POGODIO SI !!!!! "<< endl;
+			cin >> broj;
+		}
+		
+	} while (broj != pog);
+		
+}
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <string>
+#include <time.h>
+
+using namespace std;  SLOT NA ENTER
+
+int main()
+{
+
+	int jed, dva, tri, cet;
+
+	srand(time(NULL));
+
+	while (cin.ignore ()) {
+
+			jed = rand() % 10;
+			dva = rand() % 10;
+			tri = rand() % 10;
+			cet = rand() % 10;
+			cout << jed << dva << tri << cet << endl;
+
+			if (jed == dva && dva == tri && tri == cet) {
+				cout << "POBJEDAAAAAAAA" << endl;
+			}
+			else {
+				cout << "POKUSAJ PONOVO" << endl;
+			}
+	}
+	
+		
+}
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <string>
+#include <time.h>
+
+using namespace std;    JEDNORUKI JACK 
+
+int main()
+{
+
+	int jed, dva, tri, cet;
+	int niz; 
+
+	srand(time(NULL));
+
+	cout << "STISNI ENTER I ZAIGRAJ JEDNORUKOG JACKA-A" << endl;
+
+while (cin.ignore ()) {
+		   
+		for (int i = 0; i < 3; i++) {
+			jed = rand() % 4;
+			dva = rand() % 4;
+			tri = rand() % 4;
+			cet = rand() % 4;
+
+			cout << jed << dva << tri << cet << endl;
+		}
+			if (jed == dva && dva == tri && tri == cet) {
+				cout << "POBJEDAAAAAAAA" <<"\t"<< "POGODIO SI IZ  "<<niz<<"  POKUSAJA"<< endl;
+			}
+			else {
+				cout << "POKUSAJ PONOVO" << endl;
+				niz++;
+			}
+			system("PAUSE");
+			system("cls");
+
+	}
+	
+}
