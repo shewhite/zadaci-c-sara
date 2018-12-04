@@ -1,0 +1,86 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+void deuce() {
+	cout << "deuce" << endl;
+}
+
+int main()
+{
+	int ag, bg; 
+	int ap = 0;
+	int bp = 0;
+	int n;
+	char c;
+
+	cin >> ag >> bg; 
+	cin >> n; 
+		
+	for (int i = 0; i < n; i++) {
+		cin >> c; 
+		if (c == 'A') {
+			ap += 1;
+		}
+		else {
+			bp += 1;
+		}
+		
+	}
+
+	if (ap == 1) {
+		ap = 15;
+	}
+	if (ap == 2) {
+		ap = 30;
+	}
+	if (ap == 3) {
+		ap = 40;
+	}
+	if (ap == 4 && bp <= 4) {
+		ap = 'AD_A';
+	}
+	if (ap == 4 && bp == 4) {
+		cout << ag << ":" << bg << "  deuce" << endl;
+	}
+	else if (ap == 5 && bp <= 4) {
+		cout << ag << ":" << bg << "  AD_A" << endl;
+	}
+
+
+
+
+	if (bp == 1) {
+		bp = 15;
+	}
+	if (bp == 2) {
+		bp = 30;
+	}
+	if (bp == 3) {
+		bp = 40;
+	}
+	if (bp == 4 && ap <=4) {
+		ap = 'AD_B';
+	}
+	if (bp == 5 && bp ==5) {
+		cout << ag<<":"<<bg<<"  deuce" << endl;
+	}
+	if (bp == 5 && bp <= 4) {
+		cout << ag << ":" << bg << "  AD_B" << endl;
+	}
+
+	
+
+
+
+
+
+	
+
+
+	
+
+
+	system("PAUSE");
+	return 0; 
+}
