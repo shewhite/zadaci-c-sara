@@ -1,0 +1,25 @@
+#include "pch.h"
+#include <iostream>
+#include <string>;
+#include <time.h>
+using namespace std;
+int main()
+{
+	int hh, min, times, highestTemp = 0;
+	int minutesPassed=0;
+	cin >> hh >> min >> times;
+	for (int i = 0; i < times; i++) {
+		int inputTemp;
+		cin >> inputTemp;
+		if (inputTemp > highestTemp) {
+			highestTemp = inputTemp;
+			min += (i+1) * 30;
+		}
+	}
+	while (min > 59) {
+		hh++;
+		min -= 60;
+	}
+	cout << highestTemp << endl << hh << endl << min;
+	return 0;
+}

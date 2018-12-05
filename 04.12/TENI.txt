@@ -69,14 +69,6 @@ int main()
 		cout << ag << ":" << bg << "  AD_B" << endl;
 	}
 
-	
-
-
-
-
-
-	
-
 
 	
 

@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+
+int *uvecajPolje(int* p_vrijednosti, int trenutnaVelicina);
+void povecanjePolja();
+
+int main() {
+	povecanjePolja();
+}
+void povecanjePolja()
+{
+	int brojac = 0;
+	int velicina = 5;
+	int *p_vrijednosti = new int[velicina];
+	int vrijednost;
+	do {
+		cout << "Unesite broj (ili 0 za izlaz): ";
+		cin >> vrijednost;
+		if (velicina == brojac + 1)
+		{
+			// povecamo polje;
+			p_vrijednosti = uvecajPolje(p_vrijednosti, velicina);
+			velicina *= 2;
+		}
+		p_vrijednosti[brojac] = vrijednost;
+		brojac++;
+	} while (vrijednost != 0);
+
+	// ispis brojeva
+	for (int i = 0; i < velicina; i++) {
+		cout << p_vrijednosti[i] << endl;
+		if (p_vrijednosti[i + 1] == 0) {
+			break;
+		}
+	}
+}
+
+int *uvecajPolje(int* p_vrijednosti, int trenutnaVelicina)
+{
+
+	int *p_nove_vrijednosti = new int[trenutnaVelicina * 2];
+	for (int i = 0; i < trenutnaVelicina; ++i)
+	{
+		p_nove_vrijednosti[i] = p_vrijednosti[i];
+	}
+	delete p_vrijednosti;
+	return p_nove_vrijednosti;
+}

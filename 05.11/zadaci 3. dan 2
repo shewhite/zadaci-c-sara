@@ -1,0 +1,74 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	int ag, bg, n;
+	int ap = 0;
+	int bp = 0;
+	int poeni[6] = { 0, 15,30,40, };
+	string text = "";
+
+	char c;
+
+	cin >> ag >> bg;
+	cin >> n;
+
+	for (int i = 0; i < n; i++) {
+		cin >> c;
+		if (c == 'A') {
+			ap += 1;
+		}
+		else {
+			bp += 1;
+		}
+
+	}
+
+	if (ap > 3 && bp <= 2) {
+		ag++;
+		ap = 0;
+		bp = 0;
+		text = "";
+	}
+	else if (bp > 3 && bp <= 2) {
+		bg++;
+		ap = 0;
+		bp = 0;
+		text = "";
+	}
+	else if (ap > 3 && bp > 3) {
+		if (ap - bp >= 2) {
+			ag++;
+			ap = 0;
+			bp = 0;
+			text = "";
+		}
+		else if (bp - ap >= 2) {
+			bg++;
+			bp = 0;
+			ap = 0;
+			text = "";
+		}
+		else if (ap - bp == 1) {
+			text = "AD-A";
+		}
+		else if (bp - ap == 1) {
+			text = "AD-B";
+		}
+		else if (ap - bp == 0) {
+			text = "deuce";
+		}
+	}
+
+	if (text == "")
+		cout << ag << ":" << bg << " " << poeni[ap] << ":" << poeni[bp];
+	else
+		cout << ag << ":" << bg << " " << text << endl;
+
+
+	    system("PAUSE");
+		return 0;
+}
