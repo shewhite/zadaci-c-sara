@@ -1,0 +1,4 @@
+﻿  CASINO.cpp
+c:\users\uc-m19\documents\sara franjul\10.12\casino\casino\casino.cpp(217): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\uc-m19\documents\sara franjul\10.12\casino\casino\casino.cpp(343): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  CASINO.vcxproj -> C:\Users\UC-M19\Documents\Sara Franjul\10.12\CASINO\Debug\CASINO.exe
