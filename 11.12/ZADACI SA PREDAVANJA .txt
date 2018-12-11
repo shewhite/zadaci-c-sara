@@ -1,0 +1,176 @@
+fstream ifs("imena.txt",ifstream::in);  ISPIS IZ DATOTEKE
+
+	char c = ifs.get();
+
+	pretrazivanje(); 
+
+
+	/*while (ifs.good()) {
+		cout << c;
+		c = ifs.get();
+	}
+
+	ifs.close();
+
+	return 0;
+	
+	
+	
+	string search;              PRONALAZI IME ALI NE KAZE NA KOJOJ POZICIJI
+	ifstream imena;
+	string line;
+
+	imena.open("imena.txt");
+	   	 
+	if (!imena) {
+		cout << "Nemogu otvoriti file" << endl;
+		exit(1);
+	}
+	cout << "Koje ime zelis pronaci: ";
+	cin >> search;
+	
+	   	
+	size_t pos;
+	while (imena.good())
+	{
+		getline(imena, line); 
+		pos = line.find(search); 
+		if (pos != string::npos) 
+		{
+			cout << "Pronadeno na: "<< line;
+			break;
+		}
+	}
+	
+	#include <iostream>
+#include <fstream >
+#include <string>
+
+using namespace std; 
+
+int pretrazivanje(int polje[], int velicina, int trazenibroj) {
+
+	int start = 0; 
+	int kraj = velicina; 
+	int sredina = (start + kraj) / 2; 
+
+	while (start <= kraj && polje[sredina] != trazenibroj) {
+
+		if (polje[sredina] < trazenibroj) {
+
+			start = sredina + 1;
+		}
+		else {
+			kraj = sredina - 1; 
+		}
+		sredina = (start + kraj) / 2; 
+
+	}
+
+	if (polje[sredina] == trazenibroj) {
+		return sredina; 
+	}
+	else {
+		return -1; 
+	}
+}
+
+
+int main()             KADA KOMPJUTER TRAZI BROJ 
+{
+
+	int polje[100]; 
+	int start = 0; 
+	int trazenibroj; 
+	 
+
+	cout << "Upisi neki broj i vidi koliko ce mi trebati da ga nadem." << endl; 
+	cin >> trazenibroj; 
+
+	for (int i = 1; i <= 100; i++) {
+		polje[i]; 
+	}
+
+	int y = pretrazivanje (polje, 100, trazenibroj); 
+
+		cout << "Pogadam" << endl; 
+
+		if (y == -1) {
+
+			cout << " Broj nije pronaden" << endl; 
+		}
+		else {
+			cout << "Broj je pronaden" << y << endl; 
+		}
+
+
+		system("PAUSE");
+		return 0; 
+}
+
+
+void faktorijela (int broj) {   REKURZIVNA FUNKCIJA ISPIS OD VEĆEG PREMA MANJEM 
+
+
+	cout << broj << endl;
+
+
+	if (broj > 0) {
+		 
+		faktorijela (broj-1); 
+	
+	}
+
+	
+}
+
+int main()
+{
+	faktorijela (6); 
+
+	system("PAUSE"); 
+	return 0; 
+	
+	void faktorijela (int broj) {   REKURZIVNA FUNKCIJA ISPIS OD MANJEG PREMA VEĆEM 
+
+
+	
+
+	if (broj > 0) {
+		 
+		faktorijela (broj-1); 
+	
+	}
+cout << broj << endl;
+	
+}
+
+int main()
+{
+	faktorijela (6); 
+
+	system("PAUSE"); 
+	return 0; 
+	
+	
+	using namespace std;     FAKTORIJEL
+
+			
+	int faktorijel(int n)
+	{
+		if (n <= 1) return 1; 
+		else return n*faktorijel(n-1);  
+		cout << faktorijel(n) << endl; 
+	}
+
+
+int main()
+{
+	int n=6; 
+
+	cout << faktorijel(n) << endl;
+	
+	system("PAUSE"); 
+	return 0; 
+}
+
