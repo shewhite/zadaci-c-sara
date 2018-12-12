@@ -1,0 +1,88 @@
+#include <ctime>
+#include <string>
+
+using namespace std;      STUDENTTI ZADATAK 12.12. ZAPOČETO 
+
+struct student {
+	int id;
+	string ime;
+	string prezime;
+	float prosjek;
+};
+
+void unos(student studenti[100], int &brojac);
+void prikazstudenata();
+void sortiranjeime();
+void sortiranjeprezime();
+void sortiranjeprosjek();
+
+
+int main()
+{
+		student studenti[100];
+
+		int s = 0;
+
+		cout << "Dobrodosli u izbornik!\n\n 1. Unos novog studenta\n \ 2. Prikaz svih studenata\n 3. Sortiranje po imenu studenta" << endl; 
+		cout << "4. Sortiranje po prezimenu studenta \n 5. Sortiranje po prezimenu 6. Sortiranje po prosjeku \n 0. Izlaz "<< endl; 
+
+		int x;
+		cin >> x;
+
+		switch (x) {
+		case 1:
+			system("cls");
+			unos(studenti, s);
+			break;
+
+		case 2:
+			system("cls");
+			prikazstudenata();
+			break;
+
+		case 3:
+			system("cls");
+			//sortiranjime();
+			break;
+
+		case 4:
+			system("cls");
+			//sortiranjeprezime();
+			break;
+
+		case 5:
+			system("cls");
+			//sortiranjeprosjek();
+			break;
+		
+		case 0:
+			return 0;
+
+		default:
+			system("cls");
+			cout << "Niste unijeli valjani izbor. Pokušajte ponovo.\n";
+		}
+
+    
+}
+
+void unos (student studenti[100], int &brojac){
+
+	studenti novistudent; 
+	cout << "Unesite ime studenta: ";
+	cin >> novistudent.ime; 
+
+	cout << "Unesite prezime studenta: ";
+	cin >> novistudent.prezime;
+	cout << "Unesite prosjek studenta ";
+
+	cin >> novistudent.prosjek;
+
+	studenti[brojac] = novistudent;
+	brojac++;
+
+} 
+
+void prikazstudenata() {
+
+}

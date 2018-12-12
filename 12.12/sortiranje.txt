@@ -1,0 +1,148 @@
+#include <iostream>
+
+using namespace std;      BUBBLE SORT
+
+void bubblesort(int lista[], int velicina) {
+
+	int temp, j; 
+	bool bilazamjena = true; 
+
+	for (int i = 0; bilazamjena == true; i++) {
+		bilazamjena = false; 
+		for (j = 0; j < velicina - 1 - i; j++) {
+
+			if (lista [j] > lista[j + 1]) {
+				temp = lista[j]; 
+				lista[j] = lista[j + 1];
+				lista[j + 1] = temp; 
+				bilazamjena = true; 
+			}
+		}
+	}
+}
+
+int main()
+{
+	int lista[10] = { 7,3,2,5,6,9,10,1,8,4 };
+	int velicina = 10; 
+
+	bubblesort(lista, velicina); 
+
+	for (int i = 0; i < 10; i++) {
+		cout << lista[i]<<endl;
+	}
+	
+	
+	
+	#include <iostream>        SORTIRANJE RANDOM LISTE 
+#include <ctime>
+#include <cstdlib>
+
+using namespace std; 
+
+void bubblesort(int lista[], int velicina) {
+
+	int temp, j; 
+	bool bilazamjena = true; 
+
+	for (int i = 0; bilazamjena == true; i++) {
+		bilazamjena = false; 
+		for (j = 0; j < velicina - 1 - i; j++) {
+
+			if (lista [j] > lista[j + 1]) {
+				temp = lista[j]; 
+				lista[j] = lista[j + 1];
+				lista[j + 1] = temp; 
+				bilazamjena = true; 
+			}
+		}
+	}
+}
+
+int main()
+{
+	srand(time(NULL)); 
+
+	int x; 
+
+	cout << "Koliki unos zelis imati" << endl; 
+	cin >> x; 
+
+	int *lista = new int[x];
+
+	
+	for (int i =0; i < x; i++) {
+		lista[i] = rand();
+		cout << lista[i] << endl;
+		
+	}
+
+	cout << "stisni enter i sortiraj " << endl; 
+
+	cin.ignore(); 
+	cin.ignore(); 
+
+	bubblesort(lista, x); 
+
+	for (int i = 0; i < x; i++) {
+		cout << lista[i]<<endl;
+	}
+	
+
+	
+	system("PAUSE"); 
+	return 0; 
+}
+
+
+void selectionsort(int lista[], int velicina) {     SELECTIONSORT
+	
+	int  min, i, j, temp; 
+	
+	for (i = 0; i < velicina; i++) {
+		min = i;
+		
+		for (int j = i+1; j < velicina; j++) {
+			
+			if (lista [j] < lista[min]) {
+				min = j;		
+				
+			}			
+		}
+		temp = lista[i];
+		lista[i] = lista[min];
+		lista[min] = temp; 	
+		
+	}
+}
+
+void insertionsort(int lista[], int velicina) {    INSERTION  od većeg prema manjem
+
+	int element,i,  j; 
+
+	for (i = 1; i < velicina; i++) {
+		element = lista[i];
+		j = i - 1; 
+		while (j >= 0 && lista[j] < element) {
+			lista[j + 1] = lista[j];
+			j = j - 1; 
+		}
+		lista [j + 1] = element; 
+	}
+
+}
+
+void insertionsort2(int lista[], int velicina) {   INSERTION SORT  od manjeg prema većem 
+
+	int element, i, j;
+
+	for (i = 0; i < velicina; i++) {
+		element = lista[i];
+
+		for (j = i; j >= 1 && lista[j - 1] > element; j--) {
+			lista[j] = lista[j - 1];
+
+		}
+		lista[j] = element;
+	}
+}
