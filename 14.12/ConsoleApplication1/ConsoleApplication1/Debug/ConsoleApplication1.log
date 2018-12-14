@@ -1,0 +1,13 @@
+﻿  ConsoleApplication1.cpp
+c:\users\uc-m19\documents\sara franjul\14.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(19): warning C4018: '<': signed/unsigned mismatch
+c:\users\uc-m19\documents\sara franjul\14.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(23): warning C4018: '<': signed/unsigned mismatch
+c:\users\uc-m19\documents\sara franjul\14.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(37): error C2955: 'std::queue': use of class template requires template argument list
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\queue(21): note: see declaration of 'std::queue'
+c:\users\uc-m19\documents\sara franjul\14.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(39): error C2082: redefinition of formal parameter 'red'
+c:\users\uc-m19\documents\sara franjul\14.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(40): error C2082: redefinition of formal parameter 'pacijenti'
+c:\users\uc-m19\documents\sara franjul\14.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(47): error C2663: 'std::queue<_Ty,_Container>::push': 2 overloads have no legal conversion for 'this' pointer
+c:\users\uc-m19\documents\sara franjul\14.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(56): error C2661: 'std::queue<_Ty,_Container>::front': no overloaded function takes 1 arguments
+c:\users\uc-m19\documents\sara franjul\14.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(62): error C2660: 'ulazakpacijenata': function does not take 0 arguments
+  c:\users\uc-m19\documents\sara franjul\14.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(37): note: see declaration of 'ulazakpacijenata'
+c:\users\uc-m19\documents\sara franjul\14.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(64): error C2660: 'odlazakkodlijecnika': function does not take 0 arguments
+  c:\users\uc-m19\documents\sara franjul\14.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(52): note: see declaration of 'odlazakkodlijecnika'

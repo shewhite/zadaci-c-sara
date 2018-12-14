@@ -1,0 +1,42 @@
+void unos() {          	ZADATAKA PALINDROM 
+
+	stack <char> unos; 
+	string rijec = "";
+	cin >> rijec;
+	string obrnuto = "";
+
+	for (int i = 0; i < rijec.length(); i++) {
+		unos.push(rijec[i]);
+	}
+
+	for (int i = 0; i < rijec.length(); i++) {
+		obrnuto += unos.top();
+		unos.pop();
+	}
+
+	if (obrnuto == rijec) {
+		cout << rijec<< " " << obrnuto << " Bravo imate palindrom" << endl; 
+	}
+	else {
+		cout << rijec << " "<< obrnuto << " nazalost nista" << endl;
+	}
+
+}
+
+}
+
+void ulazakpacijenata(string &pacijenti, queue <string> &red) {
+
+	string ime = "";
+
+	while (ime != "STOP") {
+
+		cout << "Unesite ime pacijenta, ako zelite prekid unesite STOP: " << endl;
+		cin >> ime; 
+		if (ime != "STOP") {
+
+			red.push(pacijenti);
+		}
+
+	}
+}
