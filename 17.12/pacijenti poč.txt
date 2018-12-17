@@ -1,0 +1,175 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <ctime>
+#include <fstream>
+
+using namespace std;
+
+struct pacijent {
+	float MBO; 
+	string ime; 
+	string prezime;
+	
+};
+
+void citanjepacijenti (vector <pacijent> &pacijenti) {
+
+		string line;
+		ifstream citanje;
+		citanje.open("pacijenti.txt");
+		while (getline(citanje, line)) {
+			size_t pos = 0, prev = 0;
+			int c = 0;
+			pacijent novipacijent;
+			do
+			{
+				pos = line.find(",", prev);
+				if (pos == string::npos)pos = line.length();
+				string token = line.substr(prev, pos - prev);
+				if (!token.empty()) {
+					prev = pos + 1;
+					if (c == 0) {
+						novipacijent.MBO = stoi(token);
+					}
+					else if (c == 1) {
+						novipacijent.ime = token;
+					}
+					else if (c == 2) {
+						novipacijent.prezime = token;
+					}
+					
+					c++;
+				}
+			} while (pos < line.length() && prev < line.length());
+
+			pacijenti.push_back(novipacijent);
+		}
+}
+
+void shellSort(vector<pacijent>& pacijenti, int start, int stop)
+	{
+		int i, j, k, temp;
+		bool flag = true;
+		pacijent temp;
+		int brojac = 0; 
+
+		while (flag || (stop > 1))
+		{
+			flag = false;
+			stop = (stop + 1) / 2;
+			int loopend = pacijenti.size() - stop;
+			int startstop = start + stop;
+			for (start = 0; start < loopend; start++)
+			{
+				if (compare(pacijenti[startstop], pacijenti[start]))
+				{
+					temp = pacijenti[startstop];
+					pacijenti[startstop] = pacijenti[start];
+
+					pacijenti[start] = temp;
+					brojac += 3;
+					flag = true;
+				}
+			}
+		}
+		return;
+	}
+
+void unospacijenti(vector <pacijent> pacijenti); 
+void ispispacijenti(vector <pacijent> pacijenti);
+
+//void pretragaMBO(); 
+//void sustavcekaonice(); 
+//void dodavanjelijekova(); 
+
+int main()
+{
+	vector <pacijent> pacijenti;
+	citanjepacijenti(pacijenti);
+	int s = 0; 
+ 
+	cout << "**************  ORDINACIJA DR. FRANJUL *******************\n\n\n" << endl; 
+	cout << " 1. Unos novih pacijenata u kartoteku\n 2. Ispis svih pacijenata\n 3. Pretraga pacijenata po MBO" << endl;
+	cout << " 4. Sustav cekaonice\n 5. Dodavanje recepata za lijekove na korisnicki racun pacijenta\n 0. Izlaz " << endl;
+
+
+	int x;
+	cin >> x;
+	switch (x) {
+
+	case 1:
+		system("cls");
+		unospacijenti(pacijenti);
+		break;
+
+	case 2:
+		system("cls");
+		ispispacijenti(pacijenti);
+		break;
+
+	case 3:
+		system("cls");
+		//pretragaMBO();
+		break;
+
+	case 4:
+		system("cls");
+		//susstavcekaonice();
+		break;
+
+	case 5:
+		system("cls");
+		//dodavanjelijekova();
+		break;
+
+	case 0:
+		exit(0);
+
+	default:
+		system("cls");
+		cout << "Niste unijeli valjani izbor. Pokušajte ponovo.\n";
+	}
+
+
+}
+
+void unospacijenati(vector <pacijent> pacijenti) {
+	
+		pacijent novipacijent;
+
+		cout << "Unesite MBO pacijenta: ";
+		cin >> novipacijent.MBO;
+
+		for (int i = 0; i < pacijenti.size(); i++) {
+			if (novipacijent.MBO == pacijenti [i].MBO) {
+				cout << "ID vec postoji, izaberite drugi." << endl;
+				cin.ignore();				
+				unospacijenti(pacijenti);
+
+			}
+
+		}
+		
+		cout << "Unesite ime pacijenta: ";
+		cin >> novipacijent.ime;
+
+		cout << "Unesite prezime pacijenta: ";
+		cin >> novipacijent.prezime;
+	
+
+		pacijenti.push_back(novipacijent);
+
+		ofstream sprem;
+		sprem.open("pacijenti.txt", ofstream::out | ofstream::app);
+		sprem << novipacijent.MBO << "," << novipacijent.ime << "," << novipacijent.prezime << endl;
+
+		cout << "Povratak na izbornik enter" << endl;
+		cin.ignore();
+
+		main();
+	
+}
+void ispispacijenti(vector <pacijent> pacijenti) {
+
+}

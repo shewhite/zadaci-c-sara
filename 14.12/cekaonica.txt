@@ -1,0 +1,70 @@
+
+#include "pch.h"
+#include <iostream>
+#include <stack>
+#include <vector>
+#include <string>
+#include <queue>
+
+
+void cekaonica();
+void unos_pacijenata(std::queue <std::string> &pacijenti);
+void pregled_pacijenata(std::queue <std::string> &pacijenti);
+
+int main()
+{
+	
+	cekaonica();
+
+}
+
+
+
+void cekaonica() {
+	std::queue <std::string> pacijenti;
+
+	int input = 0;
+	while (true) {
+		std::cout << "1. Unos novih pacijenata\n2. Trenutni red pacijenata\n\n: ";
+		std::cin >> input;
+		switch (input) {
+		case 1:
+			unos_pacijenata(pacijenti);
+			break;
+		case 2:
+			pregled_pacijenata(pacijenti);
+			break;
+		default:
+			break;
+		}
+	}
+}
+
+void unos_pacijenata(std::queue <std::string> &pacijenti) {
+	std::string ime = "";
+	while (ime != "STOP") {
+		std::cout << "\nUnesite ime pacijenta (\"STOP\" za prekid) : ";
+		std::cin >> ime;
+		if (ime != "STOP")
+			pacijenti.push(ime);
+	}
+	system("PAUSE");
+}
+
+void pregled_pacijenata(std::queue <std::string> &pacijenti) {
+	int input = 1;
+
+	std::cout << "\nTrenutno na pregledu : " << pacijenti.front();
+	while (input == 1) {
+		std::cout << "\nPrimiti sljedeceg pacijenta?\n1. DA\n2. NE\n\n: ";
+		std::cin >> input;
+		if (input == 1 && pacijenti.size() > 0) {
+			std::cout << "\n" << pacijenti.front() << " je bio na pregledu..";
+			pacijenti.pop();
+			std::cout << "\nA sada je " << pacijenti.front();
+		}
+		else if(pacijenti.size() == 0)
+			std::cout << " \nNema vise pacijenata u cekaonici.\n";
+	}
+	system("PAUSE");
+}

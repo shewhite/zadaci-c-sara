@@ -1,0 +1,8 @@
+﻿  ConsoleApplication1.cpp
+c:\users\uc-m19\documents\sara franjul\17.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(98): warning C4018: '<': signed/unsigned mismatch
+c:\users\uc-m19\documents\sara franjul\17.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(129): warning C4018: '<': signed/unsigned mismatch
+c:\users\uc-m19\documents\sara franjul\17.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(136): warning C4018: '<': signed/unsigned mismatch
+c:\users\uc-m19\documents\sara franjul\17.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(194): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\uc-m19\documents\sara franjul\17.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(217): warning C4018: '<': signed/unsigned mismatch
+c:\users\uc-m19\documents\sara franjul\17.12\consoleapplication1\consoleapplication1\consoleapplication1.cpp(249): warning C4018: '<': signed/unsigned mismatch
+  ConsoleApplication1.vcxproj -> C:\Users\UC-M19\Documents\Sara Franjul\17.12\ConsoleApplication1\Debug\ConsoleApplication1.exe
