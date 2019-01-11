@@ -1,0 +1,13 @@
+﻿  Knjiznica Sardina 11.02.cpp
+c:\users\uc-m19\documents\sara franjul\11.01.19\knjiznica sardina 11.02\knjiznica sardina 11.02\knjiznica sardina 11.02.cpp(63): warning C4018: '<': signed/unsigned mismatch
+c:\users\uc-m19\documents\sara franjul\11.01.19\knjiznica sardina 11.02\knjiznica sardina 11.02\knjiznica sardina 11.02.cpp(75): warning C4018: '<': signed/unsigned mismatch
+c:\users\uc-m19\documents\sara franjul\11.01.19\knjiznica sardina 11.02\knjiznica sardina 11.02\knjiznica sardina 11.02.cpp(130): warning C4018: '<': signed/unsigned mismatch
+c:\users\uc-m19\documents\sara franjul\11.01.19\knjiznica sardina 11.02\knjiznica sardina 11.02\knjiznica sardina 11.02.cpp(143): warning C4018: '<': signed/unsigned mismatch
+c:\users\uc-m19\documents\sara franjul\11.01.19\knjiznica sardina 11.02\knjiznica sardina 11.02\knjiznica sardina 11.02.cpp(163): error C2086: 'std::vector<Posudba,std::allocator<_Ty>> Posudba::izdane_knjige': redefinition
+          with
+          [
+              _Ty=Posudba
+          ]
+  c:\users\uc-m19\documents\sara franjul\11.01.19\knjiznica sardina 11.02\knjiznica sardina 11.02\knjiznica sardina 11.02.cpp(153): note: see declaration of 'Posudba::izdane_knjige'
+c:\users\uc-m19\documents\sara franjul\11.01.19\knjiznica sardina 11.02\knjiznica sardina 11.02\knjiznica sardina 11.02.cpp(175): warning C4018: '<': signed/unsigned mismatch
+c:\users\uc-m19\documents\sara franjul\11.01.19\knjiznica sardina 11.02\knjiznica sardina 11.02\knjiznica sardina 11.02.cpp(195): warning C4018: '<': signed/unsigned mismatch

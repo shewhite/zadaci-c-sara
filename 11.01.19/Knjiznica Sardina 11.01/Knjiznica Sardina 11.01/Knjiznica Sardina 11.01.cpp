@@ -12,7 +12,7 @@
 using namespace std;
 
 class Knjiga {
-
+	static vector <Knjiga> Knjige;
 	string naslov;
 	string autor;
 	int id_knjiga;
@@ -25,11 +25,14 @@ class Knjiga {
 	void set_autor(string new_autor) { autor = new_autor; }
 	void set_id_knjiga(int new_id_knjiga) { id_knjiga = new_id_knjiga; }
 
-	void popis_knjiga();
-	void nova_knjiga();
+public:
+	static void popis_knjiga();
+	static void nova_knjiga();
 
 
 };
+
+vector <Knjiga> Knjiga::Knjige;
 
 void Knjiga::nova_knjiga() {
 	system("cls");
@@ -44,18 +47,17 @@ void Knjiga::nova_knjiga() {
 	cout << "Unesite autoa knjige" << endl;
 	cin >> autor;
 
-	NovaKnjiga.Setnaslov(naslov);  //// kako namjestiti knjigu 
-	newbook.SetName(name);
+	NovaKnjiga.set_naslov(naslov);  //// kako namjestiti knjigu 
 
 
-
-	lib.BookArray.push_back(newbook);
-	cout << "Add book succsessfully!~ " << endl;
-
+	Knjige.push_back(NovaKnjiga);
 
 }
 void Knjiga::popis_knjiga() {
 
+	for (int i = 0; i < Knjige.size(); i++) {
+		cout << Knjige[i].get_naslov() << endl;
+	}
 }
 
 class Clan {
@@ -136,20 +138,22 @@ int main() {
 			/*case '1':
 				novi_clan();
 				break;
-
-			/*case '2':
-			nova_knjiga();
+				*/
+			case '2':
+			
+				Knjiga::nova_knjiga();
 				break;
-			case '3':
+			
+			/*case '3':
 
 				break;
 			case '4':
 				();
-				break;
+				break;*/
 			case '5':
-			  popis_knjiga();
+			  Knjiga::popis_knjiga();
 				break;
-
+/*
 			case '6':
 				();
 				break;
